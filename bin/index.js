@@ -27,7 +27,7 @@ fse.mkdir(directory, () => {
     })
     install.on("close", (code) => {
       if (code === 0) {
-        console.log("\nSuccess! We suggest that you begin by typing:\n")
+        console.log("\nSuccess! Begin by typing:\n")
         console.log("  \x1b[36m%s\x1b[0m %s", "cd", path.basename(directoryPath))
         console.log("  \x1b[36m%s\x1b[0m", "npm start\n")
       }

@@ -1,6 +1,6 @@
 /// <reference path='../global.d.ts' />
 
-import { Application, Renderer } from "pixi.js"
+import { Application } from "pixi.js"
 import { CameraOrbitControl, LightingEnvironment, ImageBasedLighting, Model, Mesh3D, Light, LightType, ShadowCastingLight, ShadowQuality } from "pixi3d"
 
 let app = new Application({
@@ -37,7 +37,7 @@ app.loader.load((_, resources) => {
   LightingEnvironment.main.lights.push(directionalLight)
 
   let shadowCastingLight = new ShadowCastingLight(
-    <Renderer>app.renderer, directionalLight, { shadowTextureSize: 1024, quality: ShadowQuality.medium })
+    app.renderer, directionalLight, { shadowTextureSize: 1024, quality: ShadowQuality.medium })
   shadowCastingLight.softness = 1
   shadowCastingLight.shadowArea = 15
 
