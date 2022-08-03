@@ -15,12 +15,12 @@ if (!directory) {
   process.exit()
 }
 
-const directoryPath = path.join(path.dirname(path.resolve()), directory)
+const directoryPath = path.join(process.cwd(), directory)
 
 console.log("\nCreating a new Pixi3D app in \x1b[32m%s\x1b[0m\n", directoryPath)
 
 fse.mkdir(directory, () => {
-  fse.copy(path.join(__dirname, "../template"), directory, (e) => {
+  fse.copy(path.join(__dirname, "../template"), directoryPath, (e) => {
     const install = child_process.spawn("npm", ["install"], {
       cwd: directory,
       stdio: "inherit"
