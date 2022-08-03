@@ -1,0 +1,25 @@
+{
+  "name": "create-pixi3d-app",
+  "version": "1.0.0",
+  "description": "Create apps using Pixi3D/PixiJS, TypeScript and Webpack.",
+  "main": "bin/index.js",
+  "bin": {
+    "create-pixi3d-app": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnsmalm/create-pixi3d-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnsmalm/create-pixi3d-app/issues"
+  },
+  "homepage": "https://github.com/jnsmalm/create-pixi3d-app#readme",
+  "dependencies": {
+    "fs-extra": "^10.1.0"
+  }
+}
