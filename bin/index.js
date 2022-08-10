@@ -23,7 +23,8 @@ fse.mkdir(directory, () => {
   fse.copy(path.join(__dirname, "../template"), directoryPath, (e) => {
     const install = child_process.spawn("npm", ["install"], {
       cwd: directory,
-      stdio: "inherit"
+      stdio: "inherit",
+      shell: true
     })
     install.on("close", (code) => {
       if (code === 0) {
